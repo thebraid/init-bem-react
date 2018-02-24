@@ -1020,20 +1020,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-// class App extends Component {
-//     render() {
-//         return (
-//             <div>APP</div>
-//         )
-//     }
-// }
 var _default = (0, _bemReactCore.decl)({
   block: 'App',
   content: function content() {
     return _react.default.createElement("div", null, "APP");
   }
-}); // export default App;
-
+});
 
 exports.default = _default;
 
@@ -1054,8 +1046,6 @@ var _bApp = _interopRequireDefault([(
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import App from './components/App.js';
-// console.log('index');
 _reactDom.default.render(_react.default.createElement(_bApp.default, null), document.getElementById('react'));
 
 /***/ }),
@@ -19045,7 +19035,7 @@ exports = module.exports = __webpack_require__(35)(false);
 
 
 // module
-exports.push([module.i, "\n.App {\n    background-color: red;\n}\n", ""]);
+exports.push([module.i, "\n.App {\n    background-color: blue;\n}\n", ""]);
 
 // exports
 

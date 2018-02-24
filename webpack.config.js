@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -62,5 +63,19 @@ module.exports = {
                 ],
             },
         ]
-    }
+    },
+
+    plugins: [
+        // new CleanWebpackPlugin(['dist']),
+        // new HtmlWebpackPlugin({
+        //   title: 'Hot Module Replacement'
+        // }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ],
+
+    devServer: {
+        contentBase: './public',
+        hot: true
+    },
 };

@@ -4,7 +4,10 @@
   "description": "first_bem",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "webpack -p",
+    "start": "node server.js"
   },
   "author": "Klester",
   "license": "ISC",
@@ -26,6 +29,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "webpack": "^3.11.0",
-    "webpack-bem-loader": "^0.6.0"
+    "webpack-bem-loader": "^0.6.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
