@@ -1,0 +1,12 @@
+import React, { Fragment, Component } from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends Component {
+    render() {
+        return (
+            <div>APP</div>
+        )
+    }
+}
+
+export default App;
