@@ -1,12 +1,12 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
+import { decl } from 'bem-react-core';
 
-class App extends Component {
-    render() {
+export default decl({
+    block: 'App',
+    content() {
         return (
             <div>APP</div>
         )
     }
-}
-
-export default App;
+})
