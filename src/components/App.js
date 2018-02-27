@@ -1,12 +1,13 @@
-import React, { Fragment, Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Fragment } from 'react';
 import { decl } from 'bem-react-core';
 
 export default decl({
     block: 'App',
     content() {
         return (
-            <div>APP</div>
+            <Fragment>
+                <div>App</div>
+            </Fragment>
         )
     }
 })
