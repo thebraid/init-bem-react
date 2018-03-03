@@ -5,9 +5,12 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-        "build": "webpack -p",
-        "start": "node server.js"
+        "dev": "npm run clear && ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+        "build": "npm run dev-build",
+        "dev-build": "npm run clear && webpack",
+        "prod-build": "npm run clear && NODE_ENV=production webpack -p",
+        "start": "node server.js",
+        "clear": "rm -rf ./public/ && echo the folder '\"'public'\"' has been removed"
     },
     "author": "Klester",
     "license": "ISC",
@@ -17,6 +20,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.0.0-beta.40",
+        "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.40",
         "@babel/preset-env": "^7.0.0-beta.40",
         "@babel/preset-react": "^7.0.0-beta.40",
         "autoprefixer": "^8.0.0",
@@ -24,6 +28,7 @@
         "babel-loader": "^8.0.0-beta.0",
         "bem-react-core": "^1.0.0-rc.8",
         "css-loader": "^0.28.10",
+        "extract-text-webpack-plugin": "^3.0.2",
         "html-webpack-plugin": "^3.0.4",
         "node-static": "^0.7.10",
         "postcss-loader": "^2.1.0",
